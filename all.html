@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>form event demo</h2>
+    <p id="output" style="font-size: 18px; font-weight: bold; color: blue;"></p>
+    <form id="myform"></form>
+    <label >name:</label>
+    <input type="text" id="name"><br><br>
+
+    <label >choose to city</label>
+    <select id="city">
+    <option value="">select</option>
+    <option value="">kochi</option>
+    <option value="">chennai</option>
+    <option value="">bangalur</option>
+    </select><br><br>
+    <button type="submit">submit</button>
+    <button type="reset">reset</button>
+</form>
+<script>
+    const output=document.getElementById("output")
+    const form=document.getElementById("myform")
+    const nameinput=document.getElementById("name")
+    const cityselect=document.getElementById("city")
+
+    function show(msg){
+        output.textContent=msg
+    }
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault()
+        show("form submitted")
+    })
+
+</script>
+</body>
+</html>

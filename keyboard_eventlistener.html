@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> keyboard event</h1>
+    <input type="text" id="box" placeholder="type something....." style="padding: 10px;">
+    <p id="output " style="background-color: lightblue;padding:20px ;"></p>
+
+    <script>
+        const input_tag =document.getElementById('box')
+        const output_tag=document.getElementById('output')
+
+         input_tag.addEventListener("keydown",()=>{
+            output_tag.textContent ="key is pressed...."
+         })
+          input_tag.addEventListener("keyup",()=>{
+            output_tag.textContent ="key is released...."
+         })
+         input_tag.addEventListener("input",(e)=>{
+            output_tag.textContent="you type:"+e.target.value
+         })
+    </script>
+</body>
+</html>

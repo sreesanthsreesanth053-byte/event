@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>textcontent vs innerhtml</h1>
+    <p id="para"></p>
+    <p id="second_para"></p>
+
+
+    <script>
+        let p_tag=document.getElementById('para')
+        p_tag.innerHTML="<i>this paragraph is added by js</i>"
+
+        let second_para=document.querySelector('second_para')
+        second_para.textContent="<i>this second paragrph</i>"
+    </script>
+</body>
+</html>
